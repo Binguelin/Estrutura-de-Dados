@@ -14,18 +14,16 @@ if(T.dir != NULL)
     j = j + 1
     B[j] = T
 WHILE (j!=-1):
+    i = i + 1
+    A[i] = T.info     //Adiciona o nó atual de T em A
     if(T.dir != NULL)
         j = j + 1
         B[j] = T
     if(T.esq != NULL and (T.info NOT IN A))
         T = T.esq
-        i = i + 1
-        A[i] = T.info
     else
         if(T.esq == NULL)
-            i = i + 1
-            A[i] = T.info
-            T = B[j].dir
+            T = B[j].dir    //Retorna para o ultimo nó com filho direito
             B[j] = -1
             j = j - 1
 return A             //Retorna o vetor com o percurso em pré-ordem
