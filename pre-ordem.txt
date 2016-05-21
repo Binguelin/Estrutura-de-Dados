@@ -3,12 +3,12 @@
 
 pre-ordem(R):
 //R é um ponteiro que aponta para a raiz da arvore
-CREATE vetor A       //cria um vetor A de tamanho n igual ao tamanho da arvore
-CREATE vetor B       // cria um vetor B de tamanho n igual ao tamanho da arvore
+CREATE array A       //cria um vetor A de tamanho n igual ao tamanho da arvore
+CREATE array B       // cria um vetor B de tamanho n igual ao tamanho da arvore
 T = R                //T é um ponteiro auxiliar que aponta inicialmente para R
-B[0]=T               //Indica que não existe mais nenhum nó para voltarmos
-i=0
-j=0
+B[0] = T               //Indica que não existe mais nenhum nó para voltarmos
+i = 0
+j = 0
 A[i] = T.info
 if(T.dir != NULL)
     j = j + 1
