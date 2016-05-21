@@ -1,0 +1,32 @@
+//Algoritimo para percorrer uma arvore binaria
+//utilizando utilizando o caminho de ordem simétrica
+
+simetrica(T):
+//R é um ponteiro que aponta para a raiz da arvore
+CREATE vetor A       //cria um vetor A de tamanho n igual ao tamanho da arvore
+CREATE vetor B       // cria um vetor B de tamanho n igual ao tamanho da arvore
+T = R                //T é um ponteiro auxiliar que aponta inicialmente para R
+B[0]=T               //Indica que não existe mais nenhum nó para voltarmos
+i=0
+j=0
+if(T.dir != NULL)
+    j = j + 1
+    B[j] = T
+while(j != -1):
+    if(T.dir != NULL):
+        j = j + 1
+        B[j] = T
+    if(T.esq != NULL):
+        T = T.esq
+    else:
+        if(T.esq == NULL):
+            A[i] = T.info         //Adiciona a informação de T em A, já que A não tem filho a esquerda.
+            i = i + 1
+            T = B[j]            //Retorna para o ultimo Nó que tem um filho a esquerda.
+            if(T.info NOT IN A):
+                A[i] = T.info
+                i = i + 1
+            T = T.dir
+            B[j] = -1
+            j = j - 1
+return A
