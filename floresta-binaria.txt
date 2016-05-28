@@ -1,0 +1,21 @@
+// Algoritimo que recebe uma lista com as raizes das 
+// das arvores m-arias e um vetor com a quantidade de nós de cada arvore
+// retorna para a raiz de uma arvore binária criada pelas arvores m-arias
+
+//FIRST-arvores retorna a raiz para a primeira arvore
+
+floresta-binaria(arvores, nós):
+T = FIRST-arvores()
+while (T != NULL):							// Transforma todas as arvores em binárias
+	arvore-para-binaria(nós(T), T)
+F = FIRST-arvores()
+if (len(arvores) == 1):
+	return T       							// Caso de só uma arvore na floresta
+else:
+	F = F.next()
+	T = FIRST-arvores()
+	while (F != NULL):
+		T.dir = F
+		F = F.next()
+		T = T.next()
+	return T 								// Retorna a raiz da arvore binária

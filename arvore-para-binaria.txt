@@ -1,0 +1,21 @@
+// Algoritimo que recebe uma arvore m-aria e a transforma em uma 
+// arvore binária
+
+// v é a quantidade de nós da arvore
+
+arvore-para-binaria(v, pt):
+pai = True
+	for w in filhos de V:
+		ocupar(ptnovo)				  //Cria um novo nó
+		ptnovo.esq = NULL
+		ptnovo.dir = NULL
+		ptnovo.info = w
+		if (pai):					  //Inserir a esquerda
+			pt.esq = ptnovo
+			pai = False
+		else:
+			pt.dir = ptnovo           //Inserir a direita
+		arvore-para-binaria(w, ptnovo)
+		pt = ptnovo
+
+// A diferença desse algoritimo é que a arvore não terá um nó cabeça
