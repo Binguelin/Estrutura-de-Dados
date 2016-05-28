@@ -1,0 +1,21 @@
+// Algoritimo para imprimir o percurso em nível de uma arvore binária
+// os nós serão mostrados da esquerda para a direita
+
+// ADD-fila(x) adiciona x no final da fila
+// REMOVE-fila() retorna o primeiro elemento da fila e depois remove ele
+// FIRST-fila()  retorn o primeiro elemento da fila
+// ?Vazia(x) retorna 1 se x for uma fila vazia e 0 caso contrário
+
+prcurso-nivel(R): // R é o ponteiro que aponta para a raiz da arvore
+CREATE fila       // criamos um vetor que vai ser uma fila
+T = R             // T vai ter um nó auxiliar
+ADD-fila(T)       // adiciona t na fila
+WHILE NOT ?Vazia(fila):    //Verifica se a fila é vazia
+	if(T.esq != NULL):
+		ADD-fila(T.esq)
+	if(T.dir !- NULL):
+		ADD-fila(T.dir)
+	print REMOVE-fila()
+	T = FIRST-fila()
+
+// O precurso em nivel será impresso direto para o usuario
