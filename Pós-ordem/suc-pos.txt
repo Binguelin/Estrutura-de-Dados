@@ -1,0 +1,13 @@
+// Esse algoritimo encontra o sucessor de uma arvore binária com costura em pós ordem
+// o sucessor será retornado no ponteiro pt2
+
+suc-pos(pt1, pt2):
+if(pt1.costura.dir == 1):
+	pt2 = pt1.dir
+else:
+	pt2 = pt1
+	while(pt2 != raiz):
+		pt2 = pt2.esq
+	while(prde-pos(pt2) != pt1):
+		pt3 = prede-pos(pt2, pt3)
+	pt2 = pt3

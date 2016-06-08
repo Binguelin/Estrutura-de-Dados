@@ -1,0 +1,8 @@
+// Esse algoritimo encontra o sucessor de uma arvore binária com costura em pré ordem
+// o sucessor será retornado no ponteiro pt2
+
+suc-pre(pt1, pt2):
+if(pt1.costura.dir == 1 and pt1.dir == NULL):
+	pt2 == NULL
+else:
+	pt2 = pt1.dir
