@@ -1,0 +1,18 @@
+// Esse algoritimo recebe um apontandor para a raiz de uma arvore
+// binária e verifica se a arvore é binéria.
+
+// retorna 1 se é estritamente binária e 0 caso contrário
+
+estritamente-binaria(R):	// R é o nó raiz
+pt = R
+flag = 0 					// flag contará o número de filhos de um nó
+if(pt.dir != NULL):
+	estritamente-binaria(pt.dir)
+	flag = flag + 1
+if(pt.esq != NULL):
+	estritamente-binaria(pt.esq)
+	flag = flag + 1
+if(flag == 1)
+	return 0
+if(flag != 1 and pt == raiz):
+	return 1

@@ -1,0 +1,15 @@
+// Esse algoritimo é um procedimento recursivo que recebe um nó prt 
+// de uma arvore binária e duas chaves  min e max  como argumentos 
+// e retorna verdadeiro se todas as chaves da arvore estão entre
+// max e min.
+
+max-min(pt, max, min)
+if(pt.info > max or pt.info < min):
+	return 0;
+else:
+	if(pt.dir != NULL):
+		max-min(pt.dir, max, min)
+	if(pt.esq != NULL):
+		max-min(pt.esq, max, min)
+if(pt == Raiz):
+	return 1;
