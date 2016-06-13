@@ -1,0 +1,31 @@
+// Esse procedimento remove um nó indicado de uma arvore binária
+// de busca, mantendo sempre as propriedades da busca.
+
+
+remove-no(R, x):		// R é o nó raiz da arvore e x é o nó a ser removido
+pt = R
+while(pt.info != x):
+	if(pt.info <= x):
+		pt = pt.dir
+	else:
+		if(pt.info > x):
+			pt = pt.esq
+if(pt.esq == NULL and pt.dir == NULL):
+	pt2 = pai(pt)
+	if(pt2.dir == pt)
+	{
+		pt2.dir = NULL;
+	}
+	else
+	{
+		pt2.esq = NULL;
+	}
+	free(pt)
+else:
+	if(pt.esq == NULL):
+		pt.info = (sucessor-simetrico(pt)).info
+		remove-no(pt.info, R)
+	else:
+		if(pt.dir == NULL):
+			pt.info = (predecessor-simetrico(pt)).info
+			remove-no(pt.info, R)
