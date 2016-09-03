@@ -1,0 +1,10 @@
+// Esse procedimento recebe um apontador para a raiz de uma arvore
+// binária e a altura do nó pt e retorna 1 se a arvore for cheia
+// e 0 caso contrário.
+
+arvore-cheia(R, h):	// R é o nó raiz da arvore
+pt = R
+if(estritamente-binaria(R)==0):
+	return 0
+else:
+	if(): 

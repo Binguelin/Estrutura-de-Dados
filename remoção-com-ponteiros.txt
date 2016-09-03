@@ -1,0 +1,17 @@
+procedimento remove(x,pt,f)	
+busca_mod(x,pt,pai,f)	
+se	f	≠	2	E	f	≠	3 então escreva	“Elemento não pertence à árvore.”	
+senão se	ptˆ.esq	=	λ E	ptˆ.dir	=	λ então
+					se	f=2	então paiˆ.esq	:=	λ
+					senão paiˆ.dir	:=	λ
+			senão se	ptˆ.esq	=	λ OU	ptˆ.dir	=	λ então
+						se	f=2	então paiˆ.dir	:=	ptˆ.esq
+						senão paiˆesq	:=	ptˆ.dir
+					senão
+						pt_aux	:=	pt
+						minimo_mod(pt_aux,pai_aux,min)	
+						ptˆ.info	:=	pt_auxˆ.info
+						pai_auxˆ.esq	:=	pt_auxˆ.dir
+						pt_auxˆ.dir:=	λ
+						pt	:=pt_aux
+			libera(pt) 	 	
